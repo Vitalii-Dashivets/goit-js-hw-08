@@ -31,6 +31,8 @@ player.setCurrentTime(parsedCurrentTime).then(function (seconds) {
     }
 });
 
+
+ 
 player.setVolume(0.4).then(function(volume) {
     // volume was set
 }).catch(function(error) {
@@ -44,3 +46,5 @@ player.setVolume(0.4).then(function(volume) {
             break;
     }
 });
+
+

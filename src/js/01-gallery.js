@@ -1,5 +1,5 @@
 // Add imports above this line
-// import "simplelightbox/dist/simple-lightbox.min.css";
+
 import SimpleLightbox from  "simplelightbox";
 // Додатковий імпорт стилів
 import "simplelightbox/dist/simple-lightbox.min.css";
@@ -32,6 +32,5 @@ const optionsSet = {
 
 const galleryBox = document.querySelector('.gallery');
 galleryBox.insertAdjacentHTML('beforeend', itemsPreviewMarkup);
-
 
  new SimpleLightbox('.gallery a',  optionsSet);
