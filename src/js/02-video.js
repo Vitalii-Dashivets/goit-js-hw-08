@@ -15,8 +15,6 @@ player.on('timeupdate', throttle( function({seconds}){
    
 const currentTime = localStorage.getItem("videoplayer-current-time");
 const parsedCurrentTime = JSON.parse(currentTime);
-// console.log(currentTime);
-// console.log(parsedCurrentTime);
 
 player.setCurrentTime(parsedCurrentTime).then(function (seconds) {
     
@@ -33,3 +31,16 @@ player.setCurrentTime(parsedCurrentTime).then(function (seconds) {
     }
 });
 
+player.setVolume(0.4).then(function(volume) {
+    // volume was set
+}).catch(function(error) {
+    switch (error.name) {
+        case 'RangeError':
+            // the volume was less than 0 or greater than 1
+            break;
+
+        default:
+            // some other error occurred
+            break;
+    }
+});
